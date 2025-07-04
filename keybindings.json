@@ -1,0 +1,9 @@
+[
+    // ... 已有配置 ...
+    {
+        "key": "f6",
+        "command": "workbench.action.tasks.runTask",
+        "args": "运行任务",
+        "when": "resourceLangId == cpp && editorTextFocus"
+    }
+]

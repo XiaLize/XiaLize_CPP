@@ -12,4 +12,5 @@ int main()
     temp -= om * 60;
     os = temp;
     cout << oh << " " << om << " " << os;
+    return 0;
 }
