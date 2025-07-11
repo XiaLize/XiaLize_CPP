@@ -2,7 +2,7 @@
 using namespace std;
 int main ()
 {
-    long long n, m,f = 0;
+    int n, m,f = 0,temp,abc[2],max1 =1e9;
     cin >> n >> m;
     int a[m];
     for (int i = 0; i < m; i++)
@@ -15,11 +15,20 @@ int main ()
         {
             if (a[i] + a[j] == n)
             {
-                cout << min(a[i], a[j]) << " " << max(a[i], a[j]);
-                f = 1;
+                if(abs(a[i]-a[j])<max1)
+                {
+                	max1= abs(a[i]-a[j]);
+                    abc[0] = a[i];
+                    abc[1] = a[j];
+                    f = 1;
+                }
             }
         }
     }
-    if (f == 0) cout << "No Answer";
-    return 0;
+    if (f == 0) 
+    {
+        cout << "No Answer";
+        return 0;
+    }
+    else  cout << min(abc[0],abc[1])<< " " << max(abc[0],abc[1]);
 }

@@ -26,7 +26,7 @@
         {
             "label": "运行C/C++活动文件",
             "type": "shell",
-            "command": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            "command": "${fileDirname}\\${fileBasenameNoExtension}.exe",
             "group": {
                 "kind": "build",
                 "isDefault": true
