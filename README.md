@@ -1,35 +1,4 @@
 # <p style="text-align:center">这是我的编程作业的备份</p>
-
-
-# 框架
-#### c++
-```cpp
-#include<bits/stdc++.h>
-#define db double
-#define ll long long
-#define el endl
-#define r0 return 0
-#define IOS ios::sync_with_stdio(0),cin.tie(0),cout.tie(0)
-using namespace std;
-int main()
-{
-	IOS;
-}
-```
-```cpp
-//1开始
-for(int i = 1;i <= n;i++)
-{
-
-}
-```
-```cpp
-//0开始
-for(int i = 0;i < n;i++)
-{
-
-}
-```
 #### launch.json
 ```json
 {
