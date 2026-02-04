@@ -5,204 +5,23 @@ using namespace std;
 #define el endl
 #define r0 return 0
 #define IOS ios::sync_with_stdio(0),cin.tie(0),cout.tie(0)
-string a;
 int main()
 {
-    int n,r,shang,yu;
-    cin >> n >> r;
-    if (n == 0) {
-        cout << "0";
-        r0;
-    }
-    while(n > 0)
+    int a[3][4];
+    for(int i=0;i<3;i++)
     {
-        shang = n / r;
-        yu = n % r;
-        switch(yu)
+        for(int j=0;j<4;j++)
         {
-            case(0):
-            {
-                a.insert(a.begin(),'0');
-                break;
-            }
-            case(1):
-            {
-                a.insert(a.begin(),'1');
-                break;
-            }
-            case(2):
-            {
-                a.insert(a.begin(),'2');
-                break;
-            }
-            case(3):
-            {
-                a.insert(a.begin(),'3');
-                break;
-            }
-            case(4):
-            {
-                a.insert(a.begin(),'4');
-                break;
-            }
-            case(5):
-            {
-                a.insert(a.begin(),'5');
-                break;
-            }
-            case(6):
-            {
-                a.insert(a.begin(),'6');
-                break;
-            }
-            case(7):
-            {
-                a.insert(a.begin(),'7');
-                break;
-            }
-            case(8):
-            {
-                a.insert(a.begin(),'8');
-                break;
-            }
-            case(9):
-            {
-                a.insert(a.begin(),'9');
-                break;
-            }
-            case(10):
-            {
-                a.insert(a.begin(),'A');
-                break;
-            }
-            case(11):
-            {
-                a.insert(a.begin(),'B');
-                break;
-            }
-            case(12):
-            {
-                a.insert(a.begin(),'C');
-                break;
-            }
-            case(13):
-            {
-                a.insert(a.begin(),'D');    
-                break;
-            }
-            case(14):
-            {
-                a.insert(a.begin(),'E');
-                break;
-            }
-            case(15):
-            {
-                a.insert(a.begin(),'F');
-                break;
-            }
-            case(16):
-            {
-                a.insert(a.begin(),'G');
-                break;
-            }
-            case(17):
-            {
-                a.insert(a.begin(),'H');
-                break;
-            }
-            case(18):
-            {
-                a.insert(a.begin(),'I');
-                break;
-            }
-            case(19):
-            {
-                a.insert(a.begin(),'J');
-                break;
-            }
-            case(20):
-            {
-                a.insert(a.begin(),'K');
-                break;
-            }
-            case(21):
-            {
-                a.insert(a.begin(),'L');
-                break;
-            }
-            case(22):
-            {
-                a.insert(a.begin(),'M');
-                break;
-            }
-            case(23):
-            {
-                a.insert(a.begin(),'N');
-                break;
-            }
-            case(24):
-            {
-                a.insert(a.begin(),'O');
-                break;
-            }
-            case(25):
-            {
-                a.insert(a.begin(),'P');
-                break;
-            }
-            case(26):
-            {
-                a.insert(a.begin(),'Q');
-                break;
-            }
-            case(27):
-            {
-                a.insert(a.begin(),'R');
-                break;
-            }
-            case(28):
-            {
-                a.insert(a.begin(),'S');
-                break;
-            }
-            case(29):
-            {
-                a.insert(a.begin(),'T');
-                break;
-            }
-            case(30):
-            {
-                a.insert(a.begin(),'U');
-                break;
-            }
-            case(31):
-            {
-                a.insert(a.begin(),'V');
-                break;
-            }
-            case(32):
-            {
-                a.insert(a.begin(),'W');
-                break;
-            }
-            case(33):
-            {
-                a.insert(a.begin(),'X');
-                break;
-            }
-            case(34):
-            {
-                a.insert(a.begin(),'Y');
-                break;
-            }
-            case(35):
-            {
-                a.insert(a.begin(),'Z');
-                break;
-            }
+            cin>>a[i][j];
         }
-        n = shang;
     }
-    cout << a;
+    for(int i=0;i<3;i++)
+    {
+        for(int j=0;j<4;j++)
+        {
+            printf("%4d",a[i][j]);
+        }
+        printf("\n");
+    }
     r0;
 }
