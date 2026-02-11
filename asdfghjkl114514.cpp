@@ -7,21 +7,47 @@ using namespace std;
 #define IOS ios::sync_with_stdio(0),cin.tie(0),cout.tie(0)
 int main()
 {
-    int a[3][4];
-    for(int i=0;i<3;i++)
+    int n,t = 0;
+    cin >> n;
+    int a[n + 1] = {};
+    for (int i = 1;i <= n;i++)
     {
-        for(int j=0;j<4;j++)
-        {
-            cin>>a[i][j];
-        }
+        cin >> a[i];
     }
-    for(int i=0;i<3;i++)
+    while(1)
     {
-        for(int j=0;j<4;j++)
+        int f = 1,tempmin = 2147483647,tempmax = -1,j,k,f1 = 0;
+        for (int i = 1;i <= n;i++)
         {
-            printf("%4d",a[i][j]);
+            if(tempmin > a[i])
+            {
+                tempmin = a[i];
+                j = i;
+            }
         }
-        printf("\n");
+        for (int i = 1;i <= n;i++)
+        {
+            if(tempmax < a[i])
+            {
+                tempmax = a[i];
+                k = i;
+            }
+        }
+        a[k] -= a[j];
+        for (int i = 1;i <= n;i++)
+        {
+            if(a[i] != 0)
+            {
+                if(a[i]) f1++;
+                else f = 0;
+            }
+        }
+        if (f || f1)
+        {
+            break;
+        }
+        t++;
     }
+    cout << t;
     r0;
 }
