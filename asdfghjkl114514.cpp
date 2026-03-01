@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+#include<string.h>
 using namespace std;
 #define db double
 #define ll long long
@@ -7,47 +8,30 @@ using namespace std;
 #define IOS ios::sync_with_stdio(0),cin.tie(0),cout.tie(0)
 int main()
 {
-    int n,t = 0;
-    cin >> n;
-    int a[n + 1] = {};
-    for (int i = 1;i <= n;i++)
+    int AZ = 0,az1 = 0,_ = 0,a123 = 0;
+    char temp;
+    string a,ss;
+    getline(cin,a);
+    a=a+',';
+    for(int i=1;i<=a.size();i++)
     {
-        cin >> a[i];
+        a = {};
+        if(a[i]!=',') ss=ss+a[i];
+        else
+        {
+            if (ss.size() >= 6 && ss.size() <= 12)
+            {
+                for(int j = 1;i <= ss.size();i++)
+                {
+                    temp = ss[j];
+                    if (temp >= 'A' && temp <= 'Z') AZ = 1;
+                    if (temp >= 'a' && temp <= 'z') az1 = 1;
+                    if (temp >= '0' && temp <= '9') a123 = 1;
+                    if (temp == '!' || temp == '@'|| temp == '#'|| temp == '$') _ = 1;
+                }
+            }
+        }
+        if (AZ + az1 + a123 >= 2 && _) cout << ss;
     }
-    while(1)
-    {
-        int f = 1,tempmin = 2147483647,tempmax = -1,j,k,f1 = 0;
-        for (int i = 1;i <= n;i++)
-        {
-            if(tempmin > a[i])
-            {
-                tempmin = a[i];
-                j = i;
-            }
-        }
-        for (int i = 1;i <= n;i++)
-        {
-            if(tempmax < a[i])
-            {
-                tempmax = a[i];
-                k = i;
-            }
-        }
-        a[k] -= a[j];
-        for (int i = 1;i <= n;i++)
-        {
-            if(a[i] != 0)
-            {
-                if(a[i]) f1++;
-                else f = 0;
-            }
-        }
-        if (f || f1)
-        {
-            break;
-        }
-        t++;
-    }
-    cout << t;
     r0;
 }
