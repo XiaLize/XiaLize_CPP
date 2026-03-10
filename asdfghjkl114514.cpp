@@ -7,41 +7,19 @@ using namespace std;
 #define IOS ios::sync_with_stdio(0),cin.tie(0),cout.tie(0)
 int main()
 {
-    int t;
-    cin >> t;
-    string a;
-    for(int i = 0;i <= t;i++)
+    int m,n,k,p,price = 0;
+    cin >> m >> n;
+    int min_price[m + 1] = {};
+    for(int i = 1;i <= n;i++)
     {
-        getline(cin,a);
-        int size1 = 0,ABC = 0,a123 = 0;
-        if(a.size() >= 8)
-        {
-            size1++;
-        }
-        int j = 0;
-        while(j <= a.size())
-        {
-            char _ = a[j];
-            if (_ >= 'A' && _<= 'Z')
-            {
-                ABC++;
-                break;
-            }
-            j++ ;
-        }
-        j = 0;
-        while(j <= a.size())
-        {
-            char _ = a[j];
-            if (_ >= '0' && _<= '9')
-            {
-                a123++;
-                break;
-            }
-            j++;
-        }
-        if(size1 == 1 && ABC == 1 && a123 == 1 && i>=1) cout << "Y\n";
-        else if(i>=1) cout << "N\n";
+        cin >> k >> p;
+        if(min_price[k] == 0) min_price[k] = p;
+        else min_price[k] = min(min_price[k],p);
     }
+    for(int i = 1;i <= m;i++)
+    {
+        price += min_price[i];
+    }
+    cout << price;
     r0;
 }
