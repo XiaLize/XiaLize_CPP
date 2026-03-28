@@ -5,21 +5,28 @@ using namespace std;
 #define el endl
 #define r0 return 0
 #define IOS ios::sync_with_stdio(0),cin.tie(0),cout.tie(0)
+int len[300];
 int main()
 {
-    int m,n,k,p,price = 0;
-    cin >> m >> n;
-    int min_price[m + 1] = {};
-    for(int i = 1;i <= n;i++)
+    string str;
+    getline(cin,str);
+    int j=0;
+    for(int i=0;i<str.size();i++)
     {
-        cin >> k >> p;
-        if(min_price[k] == 0) min_price[k] = p;
-        else min_price[k] = min(min_price[k],p);
+        if(str[i]!=' '){
+            len[j]++;
+        }
+        else if(len[j]!=0){
+            j++;
+        }
     }
-    for(int i = 1;i <= m;i++)
-    {
-        price += min_price[i];
+    for(int i=0;i<=j;i++){
+        if(i==j-1){
+            cout<<len[i];
+        }
+        else{
+            cout<<len[i]<<",";
+        }
     }
-    cout << price;
     r0;
 }

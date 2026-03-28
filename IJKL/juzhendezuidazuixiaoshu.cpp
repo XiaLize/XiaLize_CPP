@@ -2,7 +2,7 @@
 #define db double
 #define ll long long
 #define el endl
-#define r0 return 0
+#define return 0 return 0
 using namespace std;
 int main()
 {
@@ -33,7 +33,7 @@ int main()
         sort(b[i],b[i]+n);
         cout << b[i][n] << " " << i << " " << n << el;
     }
-    r0;
+    return 0;
 }
 /* 题目描述
 输入两个n行m列的矩阵A，输出每行最大数和所在的位置；每一列的最小数和所在的位置

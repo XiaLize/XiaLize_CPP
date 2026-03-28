@@ -2,7 +2,7 @@
 #define db double
 #define ll long long
 #define el endl
-#define r0 return 0
+#define return 0 return 0
 #define IOS ios::sync_with_stdio(0),cin.tie(0),cout.tie(0)
 using namespace std;
 int main()
@@ -19,7 +19,7 @@ int main()
         zongjia += qian[i]*mai[i];
     }
     cout << zongjia;
-    r0;
+    return 0;
 }
 /*计算概论 28.9元/本
 

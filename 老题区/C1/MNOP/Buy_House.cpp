@@ -13,7 +13,7 @@ int main() {
         {
             fangjia *= (1 + K / 100.0);
         }
-        cout << "µÚ" << year << "Äê¹¤×Ê:" << cunkuan << " ·¿¼Û:";
+        cout << "ï¿½ï¿½" << year << "ï¿½ê¹¤ï¿½ï¿½:" << cunkuan << " ï¿½ï¿½ï¿½ï¿½:";
         printf("%.2lf\n", fangjia);
         if (cunkuan >= fangjia) {
             cout << year << endl;
